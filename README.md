@@ -1,59 +1,65 @@
-# Skillforge
-
+# SkillForge 🛠️
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+> Твоя персональная платформа развития навыков. От новичка — до мастера.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 О проекте
+
+**SkillForge** — это платформа, которая позволяет пользователям создавать индивидуальные roadmaps, управлять задачами, отслеживать прогресс и достигать целей. Приложение построено на **Angular** с применением лучших практик: **NgRx**, **RxJS**, **Firebase**, **CI/CD**, **PWA** и **SSR**.
+
+Проект задуман как способ **прокачать весь стек Angular** и продемонстрировать экспертные навыки на практике.
+
+---
+
+## 🧱 Архитектура и Стек
+
+- **Frontend**: Angular 19+, Standalone API
+- **State Management**: NgRx / Signal Store
+- **UI**: Angular Material + Tailwind CSS
+- **Backend**: Firebase (Auth, Firestore)
+- **PWA**: Offline режим, установка на устройство
+- **i18n**: Английский / Русский
+- **CI/CD**: GitHub Actions + Deploy (Vercel/Netlify)
+- **Testing**: Jasmine + Karma / Vitest + Jest
+- **SSR**: Angular Universal (в следующих этапах)
+
+---
+
+## 🔮 MVP
+
+- [x] Авторизация (Firebase)
+- [x] Создание roadmap и навыков
+- [x] Задачи внутри навыков, drag-n-drop по статусам
+- [x] Прогресс по категориям и в целом
+- [x] Тёмная тема
+- [x] Мобильная адаптивность
+- [x] PWA: offline и install
+- [x] CI/CD pipeline и деплой
+
+---
+
+## 📌 Модули
+
+- `Dashboard` – общая статистика и прогресс
+- `Roadmap` – категории навыков
+- `Tasks` – задачи внутри категории
+- `Settings` – аккаунт, тема, язык
+- `Auth` – вход, регистрация, восстановление
+
+---
+
+## ⚙️ Запуск проекта
 
 ```bash
+# Установка зависимостей
+npm install
+
+# Запуск проекта
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+# Сборка PWA
+ng build --configuration production
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# Линтер, тесты
+ng lint && ng test
